@@ -3,7 +3,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import 'dotenv/config.js';
 
-import { connectDB } from './db/connectDb.js';
+import { connectDatabse } from './db/connectDb.js';
 
 import authRoutes from './routes/auth.route.js';
 
@@ -17,6 +17,6 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 
 app.listen(process.env.PORT, () => {
-  connectDB();
+  connectDatabse();
   console.log(`Server is running on port : ${process.env.PORT}`);
 });
